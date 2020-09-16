@@ -11,5 +11,6 @@ public interface OpenWeatherMap {
     Observable<WeatherResponse> getWeatherByLtLong(@Query("lat") String latitude,
                                                    @Query("lon") String longitude,
                                                    @Query("appid") String apiId,
-                                                   @Query("unite") String unit);
+                                                   @Query("units") String units
+    );
 }
