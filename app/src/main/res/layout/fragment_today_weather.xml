@@ -4,24 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
-    android:background="@android:color/white"
     tools:context=".TodayWeatherFragment">
 
     <LinearLayout
         android:id="@+id/weather_panel"
-        android:visibility="gone"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="80dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="100dp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/txt_city_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Weather in London, GB"
-            android:textColor="@color/colorPrimary"
+            android:text="Weather in Kyiv, UA"
+            android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -42,8 +41,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="14 C"
-                android:textColor="@color/colorPrimary"
-                android:textSize="50sp"
+                android:textColor="#FFFFFF"
+                android:textSize="48sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -51,8 +50,8 @@
             android:id="@+id/txt_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Weather in London, GB"
-            android:textColor="@color/colorPrimary"
+            android:text="Weather in Kyiv, UA"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -60,16 +59,16 @@
             android:id="@+id/txt_date_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Weather in London, GB"
-            android:textColor="@color/colorPrimary"
+            android:text="Weather in Kyiv, UA"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/border"
+            android:layout_marginTop="200dp"
+            android:background="#169E9E9E"
             android:padding="16dp"
             android:stretchColumns="*">
 
@@ -78,18 +77,21 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:background="@drawable/cell"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Wind" />
+                    android:background="#009E9E9E"
+                    android:text="Wind"
+                    android:textColor="@android:color/white" />
+
                 <TextView
-                    android:layout_marginLeft="8dp"
-                    android:layout_column="1"
                     android:id="@+id/txt_wind"
-                    android:background="@drawable/cell"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Speed: 1 Deg: 1" />
+                    android:layout_column="1"
+                    android:layout_marginLeft="8dp"
+                    android:background="#009E9E9E"
+                    android:text="Speed: 1 Deg: 1"
+                    android:textColor="@android:color/white" />
             </TableRow>
 
             <TableRow
@@ -97,18 +99,21 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:background="@drawable/cell"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pressure" />
+                    android:background="#009E9E9E"
+                    android:text="Pressure"
+                    android:textColor="@android:color/white" />
+
                 <TextView
-                    android:layout_marginLeft="8dp"
-                    android:layout_column="1"
                     android:id="@+id/txt_pressure"
-                    android:background="@drawable/cell"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1013.75 hpa" />
+                    android:layout_column="1"
+                    android:layout_marginStart="8dp"
+                    android:background="#009E9E9E"
+                    android:text="1013.75 hpa"
+                    android:textColor="@android:color/white" />
             </TableRow>
 
             <TableRow
@@ -116,18 +121,21 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:background="@drawable/cell"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Humidity" />
+                    android:background="#009E9E9E"
+                    android:text="Humidity"
+                    android:textColor="@android:color/white" />
+
                 <TextView
-                    android:layout_marginLeft="8dp"
-                    android:layout_column="1"
                     android:id="@+id/txt_humidity"
-                    android:background="@drawable/cell"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100%" />
+                    android:layout_column="1"
+                    android:layout_marginLeft="8dp"
+                    android:background="#009E9E9E"
+                    android:text="100%"
+                    android:textColor="@android:color/white" />
             </TableRow>
 
             <TableRow
@@ -135,56 +143,65 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:background="@drawable/cell"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sunrise" />
+                    android:background="#009E9E9E"
+                    android:text="Sunrise"
+                    android:textColor="@android:color/white" />
+
                 <TextView
-                    android:layout_marginLeft="8dp"
-                    android:layout_column="1"
                     android:id="@+id/txt_sunrise"
-                    android:background="@drawable/cell"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="11:00" />
+                    android:layout_column="1"
+                    android:layout_marginLeft="8dp"
+                    android:background="#009E9E9E"
+                    android:text="11:00"
+                    android:textColor="@android:color/white" />
             </TableRow>
-
-            <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:background="@drawable/cell"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sunset" />
-            <TextView
-                android:layout_marginLeft="8dp"
-                android:layout_column="1"
-                android:id="@+id/txt_sunset"
-                android:background="@drawable/cell"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="18:00" />
-        </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:background="@drawable/cell"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Geo coords" />
+                    android:background="#009E9E9E"
+                    android:text="Sunset"
+                    android:textColor="@android:color/white" />
+
                 <TextView
-                    android:layout_marginLeft="8dp"
-                    android:layout_column="1"
-                    android:id="@+id/txt_geo_coord"
-                    android:background="@drawable/cell"
+                    android:id="@+id/txt_sunset"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="[32.0, -81.0]" />
+                    android:layout_column="1"
+                    android:layout_marginLeft="8dp"
+                    android:background="#009E9E9E"
+                    android:text="18:00"
+                    android:textColor="@android:color/white" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#009E9E9E"
+                    android:text="Geo coords"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/txt_geo_coord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginLeft="8dp"
+                    android:background="#009E9E9E"
+                    android:text="[32.0, -81.0]"
+                    android:textColor="@android:color/white" />
             </TableRow>
 
         </TableLayout>
@@ -195,9 +212,8 @@
         android:id="@+id/loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:indeterminate="true"
-        android:layout_marginVertical="300dp"
         android:layout_marginHorizontal="175dp"
-        />
+        android:layout_marginVertical="300dp"
+        android:indeterminate="true" />
 
 </FrameLayout>

@@ -22,18 +22,23 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
-        android:layout_marginTop="50sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabMode="fixed"
-        app:tabGravity="fill" />
+        android:layout_marginTop="0dp"
+        android:background="#AFAFAF"
+        app:layout_anchor="@+id/toolbar"
+        app:layout_anchorGravity="center"
+        app:tabGravity="fill"
+        app:tabIndicator="@android:drawable/bottom_bar"
+        app:tabMode="fixed" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:layout_marginTop="53dp"
+        android:background="@drawable/background3"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
