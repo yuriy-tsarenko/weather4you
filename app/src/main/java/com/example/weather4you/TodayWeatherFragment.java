@@ -136,7 +136,7 @@ public class TodayWeatherFragment extends Fragment {
 
                                    txt_city_name.setText(weatherResponse.getName());
                                    txt_description.setText(new StringBuilder("Weather in ").append(weatherResponse.getName()).toString());
-                                   txt_temperature.setText(new StringBuilder(String.valueOf((int)weatherResponse.getMain().getTemp())).append("°C").toString());
+                                   txt_temperature.setText(new StringBuilder(String.valueOf((int) weatherResponse.getMain().getTemp())).append("°C").toString());
                                    txt_date_time.setText(WeatherApi.convertUnixToDate(weatherResponse.getDt()));
                                    txt_pressure.setText(new StringBuilder(String.valueOf(weatherResponse.getMain().getPressure())).append(" hpa").toString());
                                    txt_humidity.setText(new StringBuilder(String.valueOf(weatherResponse.getMain().getHumidity())).append(" %").toString());
@@ -157,5 +157,11 @@ public class TodayWeatherFragment extends Fragment {
                                }
                            }
                 ));
+    }
+
+    @Override
+    public void onStop() {
+        compositeDisposable.clear();
+        super.onStop();
     }
 }
