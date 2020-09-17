@@ -1,5 +1,6 @@
 package com.example.weather4you;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -32,6 +33,8 @@ import retrofit2.Retrofit;
  */
 public class TodayWeatherFragment extends Fragment {
 
+    static TodayWeatherFragment instance;
+
     ImageView img_weather;
     TextView txt_city_name, txt_humidity, txt_sunrise, txt_sunset, txt_pressure, txt_temperature,
             txt_description, txt_date_time, txt_wind, txt_geo_coord;
@@ -40,8 +43,6 @@ public class TodayWeatherFragment extends Fragment {
 
     CompositeDisposable compositeDisposable;
     OpenWeatherMap mService;
-
-    static TodayWeatherFragment instance;
 
     public static TodayWeatherFragment getInstance() {
         if (instance == null) {
@@ -135,7 +136,7 @@ public class TodayWeatherFragment extends Fragment {
 
                                    txt_city_name.setText(weatherResponse.getName());
                                    txt_description.setText(new StringBuilder("Weather in ").append(weatherResponse.getName()).toString());
-                                   txt_temperature.setText(new StringBuilder(String.valueOf((int)weatherResponse.getMain().getTemp())).append("°C").toString());
+                                   txt_temperature.setText(new StringBuilder(String.valueOf((int) weatherResponse.getMain().getTemp())).append("°C").toString());
                                    txt_date_time.setText(WeatherApi.convertUnixToDate(weatherResponse.getDt()));
                                    txt_pressure.setText(new StringBuilder(String.valueOf(weatherResponse.getMain().getPressure())).append(" hpa").toString());
                                    txt_humidity.setText(new StringBuilder(String.valueOf(weatherResponse.getMain().getHumidity())).append(" %").toString());
@@ -156,5 +157,11 @@ public class TodayWeatherFragment extends Fragment {
                                }
                            }
                 ));
+    }
+
+    @Override
+    public void onStop() {
+        compositeDisposable.clear();
+        super.onStop();
     }
 }
